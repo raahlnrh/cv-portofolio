@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Keranjang - BlueMist Nail Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">BlueMist Nail Studio</a>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="detail.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+        <li class="nav-item"><a class="nav-link position-relative active" href="cart.html">Keranjang <span id="cartCount" class="nav-count">0</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+
+  <h2 class="fw-bold mb-4">Keranjang Belanja</h2>
+
+  <div id="cartArea"></div>
+
+  <div class="soft p-4 mt-4">
+    <h5>Ringkasan</h5>
+    <p id="cartSummary">Belum ada produk di keranjang.</p>
+    <div class="mt-3">
+      <button class="btn btn-primary mb-3" id="clearCartBtn">Kosongkan Keranjang</button>
+    </div>
+
+    
+    <h5 class="mt-4">Data Pembeli</h5>
+    <input id="buyerName" type="text" class="form-control mb-2" placeholder="Nama lengkap">
+    <input id="buyerAddress" type="text" class="form-control mb-2" placeholder="Daerah / Alamat">
+    <input id="buyerWA" type="text" class="form-control mb-2" placeholder="Nomor WhatsApp">
+
+    <select id="payMethod" class="form-control mb-3">
+      <option value="">Pilih metode pembayaran</option>
+      <option value="COD">COD (Bayar di tempat)</option>
+      <option value="Transfer">Transfer Bank</option>
+      <option value="E-Wallet">E-Wallet (Dana / OVO / Gopay)</option>
+    </select>
+
+    <button class="btn btn-info w-100" id="buyNowBtn">Beli Sekarang</button>
+  </div>
+</main>
+
+<footer class="footer"><div class="container"><p>&copy; 2025 BlueMist Nail Studio</p></div></footer>
+
+
+<div id="successPopup">
+  <div class="popup-box">
+    <h5>Pembelian Berhasil 🎉</h5>
+    <p>Terima kasih sudah mampir ke toko kami 🤍</p>
+    <button class="btn btn-primary" id="closePopupBtn">Tutup</button>
+  </div>
+</div>
+
+<script>
+const PRODUCTS={
+  'prod-1':{title:'NailArt Starter Kit',price:150000},
+  'prod-2':{title:'Premium Soft Blue Gel Polish',price:89000},
+  'prod-3':{title:'Flower Charm Nail Set',price:65000},
+  'prod-4':{title:'Marble Art Brush Set',price:49000},
+  'prod-5':{title:'Crystal Glitter Powder',price:39000},
+  'prod-6':{title:'Soft Blue Pastel Tips',price:55000},
+  'prod-7':{title:'French Tip Mini Kit',price:69000},
+  'prod-8':{title:'Nail Stickers Mix',price:45000},
+  'prod-9':{title:'Strong Nail Glue',price:25000},
+  'prod-10':{title:'Nail Cuticle Oil',price:35000},
+  'prod-11':{title:'Nail File & Buffer Set',price:29000},
+  'prod-12':{title:'Gentle Nail Remover',price:28000},
+
+  'press-1': { title:'Blossom Pink', price:77000 },
+  'press-2': { title:'Classy Nude Beige', price:71000 },
+  'press-3': { title:'Dark Galaxy Set', price:85000 },
+  'press-4': { title:'Pastel Aurora Glow', price:80000 },
+  'press-5': { title:'Soft Milky White Set', price:72000 },
+  'press-6': { title:'Romantic Rose Gold', price:88000 }
+};
+
+
+function getCart(){return JSON.parse(localStorage.getItem('nail_cart')||'[]');}
+function saveCart(c){localStorage.setItem('nail_cart',JSON.stringify(c));renderCart();window.dispatchEvent(new Event('storage'));}
+
+function renderCart(){
+  const cart=getCart();
+  const area=document.getElementById('cartArea');
+  area.innerHTML='';
+
+  if(cart.length===0){
+    area.innerHTML='<p>Keranjang kosong.</p>';
+    document.getElementById('cartSummary').textContent='Belum ada produk di keranjang.';
+    document.getElementById('clearCartBtn').style.display='none';
+    return;
+  }
+
+  function getCart(){return JSON.parse(localStorage.getItem('nail_cart')||'[]');}
+    function saveCart(c){localStorage.setItem('nail_cart',JSON.stringify(c));updateCartCount();}
+    function addToCart(id){const cart=getCart();const it=cart.find(i=>i.id===id);if(it)it.qty++;else cart.push({id:id,qty:1});saveCart(cart);}
+    function updateCartCount(){const c=getCart();const sum=c.reduce((s,i)=>s+i.qty,0);const el=document.getElementById('cartCount');if(el)el.textContent=sum;}
+    updateCartCount();window.addEventListener('storage',updateCartCount);
+
+  document.getElementById('clearCartBtn').style.display='inline-block';
+  let total=0;
+
+  cart.forEach(item=>{
+    const p=PRODUCTS[item.id];
+    const row=document.createElement('div');
+    row.className='d-flex justify-content-between align-items-center mb-3 review-box';
+    row.innerHTML=`
+      <div>
+        <strong>${p.title}</strong><br>
+        <small>Harga: Rp ${p.price.toLocaleString()}</small>
+      </div>
+      <div>
+        <input type='number' min='1' value='${item.qty}' style='width:70px' 
+          onchange="changeQty('${item.id}',this.value)">
+        <button class='btn btn-sm btn-outline-danger' onclick="removeItem('${item.id}')">Hapus</button>
+      </div>
+    `;
+    area.appendChild(row);
+    total+=p.price*item.qty;
+  });
+
+  document.getElementById('cartSummary').textContent='Total: Rp '+total.toLocaleString();
+}
+
+function changeQty(id,val){
+  const cart=getCart();
+  const it=cart.find(i=>i.id===id);
+  if(it){it.qty=Math.max(1,parseInt(val)||1);saveCart(cart);}
+}
+
+function removeItem(id){
+  let cart=getCart();
+  cart=cart.filter(i=>i.id!==id);
+  saveCart(cart);
+}
+
+function clearCart(){
+  localStorage.removeItem('nail_cart');
+  renderCart();
+  window.dispatchEvent(new Event('storage'));
+}
+
+document.getElementById('clearCartBtn').addEventListener('click',clearCart);
+renderCart();
+
+document.getElementById("buyNowBtn").addEventListener("click", function() {
+
+  const name = document.getElementById("buyerName").value.trim();
+  const address = document.getElementById("buyerAddress").value.trim();
+  const wa = document.getElementById("buyerWA").value.trim();
+  const pay = document.getElementById("payMethod").value;
+
+  if (!name || !address || !wa || !pay) {
+    alert("Semua data pembeli wajib diisi ya!");
+    return;
+  }
+
+  document.getElementById("successPopup").style.display = "flex";
+
+  document.getElementById("closePopupBtn").onclick = function () {
+    document.getElementById("successPopup").style.display = "none";
+    clearCart();
+  };
+
+});
+</script>
+
+<!-- ADD: Bootstrap JS agar toggler berfungsi -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

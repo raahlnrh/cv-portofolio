@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --soft-blue: #e6f2ff;
+  --accent: #7dafff;
+  --accent-dark: #6aa0ff;
+  --card: #d9eaff;
+  --star-yellow: #ffd166;
+}
+
+/* Global */
+body {
+  background: var(--soft-blue);
+  font-family: 'Poppins', sans-serif;
+  color: #1f2d3d;
+  margin: 0;
+  animation: fadeIn .8s ease-in-out;
+}
+
+@keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+
+/* Navbar */
+.navbar {
+  background: #a5c9ff;
+  transition: 0.2s;
+}
+.navbar:hover {
+  background: #94bfff;
+}
+.nav-link.active {
+  font-weight: 700;
+  color: #003a75 !important;
+}
+
+/* Card & Layout */
+.container.soft, .soft {
+  background: var(--card);
+  border-radius: 14px;
+  transition: transform .22s;
+}
+.soft:hover {
+  transform: scale(1.008);
+}
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .25s, box-shadow .25s;
+  border: none;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 34px rgba(16,24,40,0.09);
+}
+.card-img-top {
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Star Rating */
+.star {
+  font-size: 22px;
+  color: #cbd9ff;
+  cursor: pointer;
+  transition: color .18s, transform .13s;
+}
+.star:hover {
+  color: var(--accent-dark);
+  transform: scale(1.07) rotate(-4deg);
+}
+.star.active {
+  color: var(--star-yellow);
+  filter: drop-shadow(0 0 4px rgba(255,209,102,0.4));
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: scale(1.03);
+}
+.btn-wa {
+  background: #25D366;
+  color: #fff;
+  border-radius: 10px;
+}
+.btn-wa:hover {
+  filter: brightness(.9);
+  transform: translateY(-2px);
+}
+
+/* Product Button Group */
+.product-actions .btn {
+  margin-left: 6px;
+}
+
+/* Badge & Promo */
+.badge-promo {
+  background: #fff7e6;
+  color: #7a4b00;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.promo-card {
+  background: linear-gradient(180deg, rgba(125,170,255,0.08), rgba(255,255,255,0.4));
+  border-radius: 12px;
+  padding: 18px;
+}
+.gallery-scroll {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+    }
+
+    .gallery-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery-scroll::-webkit-scrollbar-thumb {
+      background: #bbb;
+      border-radius: 10px;
+    }
+
+    /* foto vertikal */
+    .gallery-img-vertical {
+      width: 180px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+/* Footer */
+.footer {
+  padding: 18px 0;
+  text-align: center;
+  color: #334155;
+}
+
+/* Carousel */
+.carousel-inner img {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* Cart Notification */
+.nav-count {
+  background: #fff;
+  color: #1f2d3d;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.nav-count.fw-bold {
+  transform: scale(1.15);
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-img-top { height: 190px; }
+  .carousel-inner img { height: 240px; }
+}
+
+/* booking */
+.soft-box { background:white; border-radius:12px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    .btn-primary { background:#6fb7ff; border:none; }
+    .btn-primary:hover { background:#54a7f7; }
+
+/* galeri */
+body {
+      background: #e7f2ff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .gallery-title {
+      font-weight: 600;
+      color: #3b66a8;
+    }
+
+    /* Kartu gambar */
+      body {
+      background: #e7f2ff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .gallery-title {
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .gallery-card {
+      border-radius: 15px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .design-name {
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      color: #305a94;
+      font-weight: 500;
+      background: #f4f8ff;
+    }
+    /* POPUP SUCCESS */
+    #successPopup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .popup-box {
+      background: #e7f1ff;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      animation: popIn 0.3s ease;
+      width: 85%;
+      max-width: 350px;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+      /* tambahan responsive kecil */
+    @media (max-width: 576px) {
+      .soft p {
+        max-width: 100% !important;
+      }
+    }
+    /* CSS tambahan untuk mobile-friendly */
+    #rStars span {
+      font-size: 1.5rem;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    @media (max-width:576px){
+      #rStars span { font-size:1.2rem; }
+      .review-box { padding: 10px; }
+    }
+    .review-box {
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+    }
+    .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

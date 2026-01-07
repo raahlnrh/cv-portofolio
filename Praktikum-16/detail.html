@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BlueMist Nail Studio - Produk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">BlueMist Nail Studio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link active" href="detail.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+        <li class="nav-item"><a class="nav-link position-relative" href="cart.html">Keranjang <span id="cartCount" class="nav-count">0</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  
+  <section class="soft p-4 shadow-sm mb-4">
+    <h2 class="fw-bold mb-3">Favorit Pelanggan</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/5f/69/1b/5f691b9c73705fa924ef60aef902ba53.jpg" class="card-img-top" alt="Premium Soft Blue Gel Polish">
+          <div class="card-body text-center">
+            <h6>Premium Soft Blue Gel Polish</h6>
+            <p class="small">Warna lembut & tahan lama — sering kali habis stok.</p>
+            <a class="btn btn-primary" href="#prod-2">Lihat</a>
+            <a class="btn btn-wa ms-2" href="https://wa.me/6281234567890?text=Halo%21%20Saya%20tertarik%20dengan%20Premium%20Soft%20Blue%20Gel%20Polish" target="_blank">Pesan WA</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/63/69/b9/6369b9f85c4d4d99cb886f6f758ec477.jpg" class="card-img-top" alt="NailArt Starter Kit">
+          <div class="card-body text-center">
+            <h6>NailArt Starter Kit</h6>
+            <p class="small">Pilihan first-timer & hadiah populer.</p>
+            <a class="btn btn-primary" href="#prod-1">Lihat</a>
+            <a class="btn btn-wa ms-2" href="https://wa.me/6281234567890?text=Halo%21%20Saya%20tertarik%20dengan%20NailArt%20Starter%20Kit" target="_blank">Pesan WA</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/fe/02/76/fe02760e65825a76140871e7c0898e14.jpg" class="card-img-top" alt="Flower Charm Nail Set">
+          <div class="card-body text-center">
+            <h6>Flower Charm Nail Set</h6>
+            <p class="small">Cocok untuk tampilan manis & fotogenic.</p>
+            <a class="btn btn-primary" href="#prod-3">Lihat</a>
+            <a class="btn btn-wa ms-2" href="https://wa.me/6281234567890?text=Halo%21%20Saya%20tertarik%20dengan%20Flower%20Charm%20Nail%20Set" target="_blank">Pesan WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section>
+    <h3 class="mb-4">Koleksi NailArt (12 Produk)</h3>
+    <div class="row products-grid">
+
+     
+      <div class="col-md-4 product-card" id="prod-4">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/f1/c5/66/f1c56637287cda945378aa57f5d8ca7b.jpg" class="card-img-top" alt="Marble Art Brush Set">
+          <div class="card-body">
+            <h5 class="fw-bold">Marble Art Brush Set</h5>
+            <p class="small">Kuas premium untuk membuat efek marble yang halus.</p>
+            <p class="product-price">Rp 92.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-4">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-4')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Marble Art Brush Set')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 product-card" id="prod-5">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/03/48/bd/0348bdd377181e70346d87f57822623e.jpg" class="card-img-top" alt="Crystal Glitter Powder">
+          <div class="card-body">
+            <h5 class="fw-bold">Crystal Glitter Powder</h5>
+            <p class="small">Glitter halus untuk kilau mewah namun tetap subtle.</p>
+            <p class="product-price">Rp 29.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-5">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-5')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Crystal Glitter Powder')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 product-card" id="prod-6">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/74/92/82/7492829aa4b17915cca9c658bbbb4a30.jpg" class="card-img-top" alt="Soft Blue Pastel Tips">
+          <div class="card-body">
+            <h5 class="fw-bold">Soft Blue Pastel Tips Press-On</h5>
+            <p class="small">Kuku palsu elegan — cocok untuk acara formal maupun kasual.</p>
+            <p class="product-price">Rp 74.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-6">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-6')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Soft Blue Pastel Tips')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 product-card" id="prod-7">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/5c/ff/d0/5cffd082180cd06b0c490271cb42749f.jpg" class="card-img-top" alt="French Tip Mini Kit">
+          <div class="card-body">
+            <h5 class="fw-bold">French Tip Mini Kit</h5>
+            <p class="small">Alat lengkap untuk french tip yang rapi.</p>
+            <p class="product-price">Rp 69.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-7">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-7')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('French Tip Mini Kit')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-4 product-card" id="prod-8">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/38/bd/19/38bd19c8df97e12f631e5c5b156cfbdf.jpg" class="card-img-top" alt="Nail Stickers Mix">
+          <div class="card-body">
+            <h5 class="fw-bold">Nail Stickers Mix</h5>
+            <p class="small">Campuran motif floral, glitter & minimalist.</p>
+            <p class="product-price">Rp 21.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-8">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-8')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Nail Stickers Mix')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 product-card" id="prod-9">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/d6/e2/9c/d6e29c0fc98953f6751df87ed11f62ee.jpg" class="card-img-top" alt="Strong Nail Glue">
+          <div class="card-body">
+            <h5 class="fw-bold">Strong Nail Glue</h5>
+            <p class="small">Lem kuku kuat & cepat kering.</p>
+            <p class="product-price">Rp 11.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-9">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-9')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Strong Nail Glue')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+       <div class="col-md-4 product-card" id="prod-2">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/1200x/5f/69/1b/5f691b9c73705fa924ef60aef902ba53.jpg" class="card-img-top" alt="Premium Soft Blue Gel Polish">
+          <div class="card-body">
+            <h5 class="fw-bold">Premium Soft Blue Gel Polish Press-On</h5>
+            <p class="small">Warna pastel lembut, tahan lama, finish glossy.</p>
+            <p class="product-price">Rp 90.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-2">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-2')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Premium Soft Blue Gel Polish')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4 product-card" id="prod-11">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/2d/78/be/2d78beabb7cdefb9dbbe0cae290325e7.jpg" class="card-img-top" alt="Nail File & Buffer Set">
+          <div class="card-body">
+            <h5 class="fw-bold">Nail File & Buffer Set</h5>
+            <p class="small">Untuk merapikan dan menghaluskan permukaan kuku.</p>
+            <p class="product-price">Rp 17.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-11">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-11')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Nail File & Buffer Set')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 product-card" id="prod-12">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/c1/a2/f7/c1a2f725eb26ec2f358a42da13ecbb8e.jpg" class="card-img-top" alt="Gentle Nail Remover">
+          <div class="card-body">
+            <h5 class="fw-bold">Gentle Nail Remover</h5>
+            <p class="small">Penghapus kuku lembut namun efektif.</p>
+            <p class="product-price">Rp 58.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-12">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-12')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Gentle Nail Remover')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 product-card" id="prod-1">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/63/69/b9/6369b9f85c4d4d99cb886f6f758ec477.jpg" class="card-img-top" alt="NailArt Starter Kit">
+          <div class="card-body">
+            <h5 class="fw-bold">NailArt Starter Kit</h5>
+            <p class="small">Paket lengkap: brush, dotting tools, base & top coat — ideal untuk pemula.</p>
+            <p class="product-price">Rp 165.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-1">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-1')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('NailArt Starter Kit')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4 product-card" id="prod-10">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/d4/58/ca/d458cac066ac89a9db120e68573f0604.jpg" class="card-img-top" alt="Nail Cuticle Oil">
+          <div class="card-body">
+            <h5 class="fw-bold">Nail Cuticle Oil</h5>
+            <p class="small">Menjaga kelembapan kutikula & kuku.</p>
+            <p class="product-price">Rp 87.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-10">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-10')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Nail Cuticle Oil')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4 product-card" id="prod-3">
+        <div class="card p-3 h-100 text-center">
+          <img src="https://i.pinimg.com/736x/fe/02/76/fe02760e65825a76140871e7c0898e14.jpg" class="card-img-top" alt="Flower Charm Nail Set">
+          <div class="card-body">
+            <h5 class="fw-bold">Flower Charm Nail Set Press-On</h5>
+            <p class="small">Set aksesoris bunga yang membuat look jadi manis & fotogenic.</p>
+            <p class="product-price">Rp 65.000</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div class="star-rating" data-id="prod-3">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary" onclick="addToCart('prod-3')">+ Keranjang</button>
+                <button class="btn btn-wa" onclick="orderWhatsApp('Flower Charm Nail Set')">WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  
+<section class="mt-5">
+  <h3 class="mb-4">Koleksi Kuku Palsu (Press-On Nails)</h3>
+  <p class="text-muted mb-4">Koleksi desain kuku palsu premium — siap pakai untuk pelanggan jasa nail art.</p>
+
+  <div class="row products-grid">
+
+    
+    <div class="col-md-4 product-card" id="press-1">
+      <div class="card p-3 h-100 text-center">
+        <img src="https://i.pinimg.com/1200x/67/51/fd/6751fd374af6b5ef0a16f2c0fe3ba62a.jpg" class="card-img-top" alt="Blossom Pink Press-On">
+        <div class="card-body">
+          <h5 class="fw-bold">Blossom Pink</h5>
+          <p class="small">Desain floral lembut cocok untuk daily look & photoshoot.</p>
+          <p class="product-price">Rp 77.000</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="star-rating" data-id="press-1">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('press-1')">+ Keranjang</button>
+              <button class="btn btn-wa" onclick="orderWhatsApp('Blossom Pink Press-On')">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col-md-4 product-card" id="press-2">
+      <div class="card p-3 h-100 text-center">
+        <img src="https://i.pinimg.com/1200x/27/b2/d4/27b2d43bf22be746101b7edeef7dc468.jpg" class="card-img-top" alt="Classy Nude Beige">
+        <div class="card-body">
+          <h5 class="fw-bold">Classy Nude Beige</h5>
+          <p class="small">Set kuku natural elegan — favorit untuk acara formal.</p>
+          <p class="product-price">Rp 71.000</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="star-rating" data-id="press-2">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('press-2')">+ Keranjang</button>
+              <button class="btn btn-wa" onclick="orderWhatsApp('Classy Nude Beige')">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 product-card" id="press-3">
+      <div class="card p-3 h-100 text-center">
+        <img src="https://i.pinimg.com/736x/28/5f/e0/285fe07258a8dbb98eeca185e13aa847.jpg" class="card-img-top" alt="Dark Galaxy Set">
+        <div class="card-body">
+          <h5 class="fw-bold">Dark Galaxy Set</h5>
+          <p class="small">Tema galaxy biru gelap dengan glitter mewah.</p>
+          <p class="product-price">Rp 85.000</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="star-rating" data-id="press-3">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('press-3')">+ Keranjang</button>
+              <button class="btn btn-wa" onclick="orderWhatsApp('Dark Galaxy Set')">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 product-card" id="press-4">
+      <div class="card p-3 h-100 text-center">
+        <img src="https://i.pinimg.com/736x/8a/7e/7e/8a7e7e868dedce15880985e98b4b6d7a.jpg" class="card-img-top" alt="Pastel Aurora Glow">
+        <div class="card-body">
+          <h5 class="fw-bold">Pastel Aurora Glow</h5>
+          <p class="small">Look dreamy lembut dengan efek aurora shine.</p>
+          <p class="product-price">Rp 80.000</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="star-rating" data-id="press-4">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('press-4')">+ Keranjang</button>
+              <button class="btn btn-wa" onclick="orderWhatsApp('Pastel Aurora Glow')">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 product-card" id="press-5">
+      <div class="card p-3 h-100 text-center">
+        <img src="https://i.pinimg.com/1200x/b2/1e/52/b21e52aeb32c8077ae225ad7dbcdfaf2.jpg" class="card-img-top" alt="Soft Milky White Set">
+        <div class="card-body">
+          <h5 class="fw-bold">Soft Milky White Set</h5>
+          <p class="small">Kuku putih susu clean look, cocok untuk photoshoot.</p>
+          <p class="product-price">Rp 72.000</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="star-rating" data-id="press-5">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('press-5')">+ Keranjang</button>
+              <button class="btn btn-wa" onclick="orderWhatsApp('Soft Milky White Set')">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 product-card" id="press-6">
+      <div class="card p-3 h-100 text-center">
+        <img src="https://i.pinimg.com/736x/29/f2/c7/29f2c73dda38545cc8ef8b689ae46528.jpg" class="card-img-top" alt="Romantic Rose Gold">
+        <div class="card-body">
+          <h5 class="fw-bold">Romantic Rose Gold</h5>
+          <p class="small">Nuansa rose gold dengan glitter manis & finish premium.</p>
+          <p class="product-price">Rp 88.000</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="star-rating" data-id="press-6">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('press-6')">+ Keranjang</button>
+              <button class="btn btn-wa" onclick="orderWhatsApp('Romantic Rose Gold')">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer"><div class="container"><p>&copy; 2025 BlueMist Nail Studio</p></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Minimal JS: cart + ratings + WA
+const WA_NUMBER = '6282258309902'; 
+
+// WhatsApp order: buka wa dengan pesan detail (format C)
+function orderWhatsApp(productName){
+  const msg = `Halo! Saya tertarik memesan Nail Art "${productName}" — boleh info harga & opsi model/warna?`;
+  const url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+  window.open(url, '_blank');
+}
+
+// CART (localStorage)
+function getCart(){ return JSON.parse(localStorage.getItem('nail_cart') || '[]'); }
+function saveCart(c){ localStorage.setItem('nail_cart', JSON.stringify(c)); updateCartCount(); }
+function addToCart(id){
+  const cart = getCart();
+  const it = cart.find(i => i.id === id);
+  if(it) it.qty++;
+  else cart.push({id: id, qty: 1});
+  saveCart(cart);
+  flashCartCount();
+}
+function updateCartCount(){
+  const cart = getCart();
+  const total = cart.reduce((s,i)=>s + (i.qty||0), 0);
+  const el = document.getElementById('cartCount');
+  if(el) el.textContent = total;
+}
+function flashCartCount(){
+  const el = document.getElementById('cartCount');
+  if(!el) return;
+  el.classList.add('fw-bold');
+  setTimeout(()=> el.classList.remove('fw-bold'), 600);
+}
+
+
+function getRatings(){ return JSON.parse(localStorage.getItem('nail_ratings') || '{}'); }
+function saveRatings(r){ localStorage.setItem('nail_ratings', JSON.stringify(r)); }
+function updateStars(){
+  const ratings = getRatings();
+  document.querySelectorAll('.star-rating').forEach(el=>{
+    const id = el.dataset.id;
+    const avg = ratings[id]?.avg || 0;
+    const stars = el.querySelectorAll('.star');
+    stars.forEach((s, i) => {
+      s.classList.toggle('active', i < Math.round(avg));
+      s.onclick = () => {
+        rateProduct(id, i+1);
+      };
+      s.tabIndex = 0;
+      s.onkeydown = (e) => { if(e.key === 'Enter' || e.key === ' ') { rateProduct(id, i+1); } };
+    });
+  });
+}
+function rateProduct(id, val){
+  const r = getRatings();
+  if(!r[id]) r[id] = {sum:0, count:0, avg:0};
+  r[id].sum += val;
+  r[id].count += 1;
+  r[id].avg = r[id].sum / r[id].count;
+  saveRatings(r);
+  updateStars();
+  const card = document.querySelector(`#${id} .card`);
+  if(card){
+    card.style.transform = 'translateY(-6px) scale(1.01)';
+    setTimeout(()=> card.style.transform = '', 200);
+  }
+}
+
+
+updateStars();
+updateCartCount();
+window.addEventListener('storage', ()=>{ updateStars(); updateCartCount(); });
+</script>
+</script>
+
+</body>
+</html>
