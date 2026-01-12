@@ -108,6 +108,9 @@
     </div>
 </section>
 
+<button id="downloadBtn">⬇ Download Tampilan Website</button>
+
+
 <footer>
     © 2026 | Dibuat oleh Raahil Naurah Firdaus Syadzaa
 </footer>
@@ -118,7 +121,13 @@
 
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("active");
+
     });
+   
+  document.getElementById("downloadBtn").addEventListener("click", () => {
+    window.print();
+  });
+
 </script>
 
 </body>

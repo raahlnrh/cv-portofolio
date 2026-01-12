@@ -162,6 +162,28 @@ footer {
     color: white;
 }
 
+/* ===== DOWNLOAD BUTTON ===== */
+#downloadBtn {
+    display: block;
+    margin: 40px auto;
+    background: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+#downloadBtn:hover {
+    background: #1e40af;
+    transform: scale(1.05);
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
@@ -217,4 +239,54 @@ footer {
         width: 90%;
         margin: 10px auto;
     }
+
+    /* ================= PRINT MODE ================= */
+@media print {
+
+    /* ukuran halaman */
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        padding-top: 0;
+    }
+
+    /* sembunyikan navbar & tombol */
+    nav,
+    #downloadBtn {
+        display: none !important;
+    }
+
+    /* cegah card terpotong */
+    section,
+    .card,
+    .hero {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* hero jadi vertikal */
+    .hero {
+        grid-template-columns: 1fr !important;
+        box-shadow: none;
+    }
+
+    /* hapus shadow */
+    * {
+        box-shadow: none !important;
+    }
+
+    /* link tampil sebagai teks */
+    a {
+        color: black !important;
+        text-decoration: none;
+    }
+
+}
+
+    
 }
